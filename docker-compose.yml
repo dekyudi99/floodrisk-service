@@ -1,7 +1,7 @@
 services:
   flask_app:
     build: .
-    container_name: flask_api-services
+    container_name: floodrisk-service
     ports:
       - "5000:5000"
     volumes:
