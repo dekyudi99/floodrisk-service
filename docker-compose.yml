@@ -1,0 +1,17 @@
+services:
+  flask_app:
+    build: .
+    container_name: flask_api-services
+    ports:
+      - "5000:5000"
+    volumes:
+      - .:/app
+    env_file:
+      - .env
+    networks:
+      - gis_network
+
+networks:
+  gis_network:
+    driver: bridge
+    name: analyst_network
